@@ -1,0 +1,41 @@
+// Body
+$body-bg: #fcfdfd;
+
+// Borders
+$laravel-border-color: darken($body-bg, 10%);
+$list-group-border-color: $laravel-border-color;
+$card-border-color: $laravel-border-color;
+
+// Brands
+$primary: #337ab7;
+$info: #5bc0de;
+$success: #5cb85c;
+$warning: #f0ad4e;
+$danger: #d9534f;
+
+//Colors
+$enji: #9f353a;
+$rurikon: #0b346e;
+$ruri: #005caf;
+$shikon: #070707;
+$shironezumi: #bdc0ba;
+$kanzo: #fc9f4d;
+$namari: #787878;
+$kamenozoki: #a5dee4;
+$byakugun: #78c2c4;
+$keshizumi: #434343;
+$suoh: #8E354A;
+$kon: #0f2540;
+
+// Typography
+$font-family-sans-serif: 'source-han-serif-tc', sans-serif;
+$font-size-base: 1.25rem;
+$line-height-base: 1.5;
+
+//Pagination
+$pagColDefault: $shikon;
+$pagColHighlight: #dee2e6;
+$pagBgDefault: #ffffff;
+$pagBgHighlight: $enji;
+$pagBdDefault: #dee2e6;
+$pagBdHighlight: $enji;
