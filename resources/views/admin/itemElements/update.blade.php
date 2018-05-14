@@ -3,7 +3,7 @@
 @section('content')
     @include('common.errors')
 
-    @if (count($item_element) > 0)
+    @if (!empty($item_element))
         <form action="{{ route('admin.itemElements.update', $item_element->id) }}" method="POST" class="form-horizontal">
             {{ csrf_field() }}
 

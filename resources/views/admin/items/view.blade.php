@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-    @if (count($item) > 0)
+    @if (!empty($item))
         <div class="card">
             <div class="card-header">
                 <div class="d-flex flex-wrap">

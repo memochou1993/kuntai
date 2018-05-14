@@ -1,6 +1,7 @@
 @import "variables";
 
 body {
+    font-weight: 300;
     color: $shikon;
     select {
         border: 1px solid #dde9e9;
@@ -10,6 +11,10 @@ body {
             text-decoration: none;
         }
     }
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, th, .dropdown-item, .form-control, dt {
+    font-weight: 300;
 }
 
 @for $i from 1 through 6 {
@@ -29,36 +34,29 @@ body {
 }
 
 #scroll-to-top {
-    color: #ffffff;
+    color: rgba($info, 0.8);
     font-size: 2rem;
     display: none;
-    background-color: rgba($primary, 0.8);
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    border-radius: 4px;
     margin: 10px;
     position: fixed;
     bottom: 75px;
     right: 30px;
-    transition: background-color 0.3s;
+    transition: color 0.3s;
     z-index: 99;
     &:hover {
         cursor: pointer;
-        background-color: rgba($primary, 1);
+        color: rgba($info, 1);
     }
     &:active {
-        background-color: $shikon;
+        color: rgba($info, 0.8);
     }
 }
 
 #header {
-    font-family: 'cwTeXHei', sans-serif;
     margin: 4.5rem 0 0 0;
 }
 
 #info {
-    font-family: 'Microsoft JhengHei', sans-serif;
     padding: 0.75rem 0;
 }
 
@@ -76,7 +74,6 @@ body {
 }
 
 #footer {
-    font-family: 'Microsoft JhengHei', sans-serif;
     color: #ffffff;
     background-color: $enji;
     margin: 6rem 0 0 0;
@@ -112,7 +109,6 @@ body {
         padding: 0.75rem 0 0 0;
     }
     .box-search {
-        font-family: 'Microsoft JhengHei', sans-serif;
         .box-search-icon {
             color: #ffffff;
         }
@@ -169,24 +165,22 @@ body {
 }
 
 .btn-variety {
-    font-family: 'cwTeXHei', sans-serif;
     font-size: 1.25rem;
     color: #ffffff;
     margin: 0 0.375rem 0.375rem 0;
     padding: 0 0.625rem;
-    background-color: rgba($warning, 0.8);
+    background-color: rgba($warning, 0.9);
     &:hover {
         color: #ffffff;
     }
 }
 
 .btn-tag {
-    font-family: 'cwTeXHei', sans-serif;
     font-size: 1.25rem;
     color: #ffffff;
     margin: 0 0.375rem 0.375rem 0;
     padding: 0 0.625rem;
-    background-color: rgba($info, 0.8);
+    background-color: rgba($info, 0.9);
     &:hover {
         color: #ffffff;
     }
@@ -194,7 +188,6 @@ body {
 
 .breadcrumb {
     font-size: 1.25rem;
-    font-family: 'Microsoft JhengHei', sans-serif;
     background-color: #fcfdfd;
     margin: 0;
     padding: 0;
@@ -244,6 +237,25 @@ body {
     .card-fooder {
         background-color: rgba($kamenozoki, 0.2);
     }
+}
+
+.ui-autocomplete {
+    padding: 0.25rem 0;
+    -webkit-border-radius: 0.25rem;
+    -moz-border-radius: 0.25rem;
+    border-radius: 0.25rem;
+    max-height: 300px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 99 !important;
+}
+
+.ui-tooltip {
+    color: #FFF;
+    padding: 0 1rem;
+    background: rgba($shironezumi, 0.8);
+    border: 1px solid #FFF;
+    box-shadow: none;
 }
 
 @media (max-width: 575px) {

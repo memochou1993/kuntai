@@ -71,7 +71,7 @@ class HomeController extends Controller
     
         Mail::send('email.contact', $data, function($message) {
             $message
-                ->to('hoshizora19931120@hotmail.com', '周孝威')
+                ->to('admin@kuntai.epoch.tw', '廣太洋酒')
                 ->subject('來自「廣太洋酒」網站的郵件')
                 ->from('admin@kuntai.epoch.tw', '廣太洋酒');
         });

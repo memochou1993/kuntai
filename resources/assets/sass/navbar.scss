@@ -7,10 +7,11 @@ $mainNavColHighlight: $suoh;
 $mainNavDropDown: true;
 $mainNavFontHighlight: 1.5rem;
 $mainNavFontDefault: 1.25rem;
-$mainNavFontFamily: 'source-han-serif-tc', sans-serif;
+$mainNavFontFamily: "Noto Sans TC", sans-serif;
 .nav-main {
     font-family: $mainNavFontFamily;
     font-size: $mainNavFontDefault;
+    font-weight: 300;
     background-color: $mainNavBgDefault;
     padding: 0.125rem 1.12rem;
     border-top: 3px solid $enji;
@@ -173,14 +174,14 @@ $subNavColHighlight: #000000;
 $subNavDropDown: true;
 $subNavFontHighlight: 1.75rem;
 $subNavFontDefault: 1.375rem;
-$subNavFontFamily: 'cwTeXHei', sans-serif;
+$subNavFontFamily: "Noto Sans TC", sans-serif;
 .nav-sub {
     padding: 0.5rem;
     line-height: 1.125rem;
     background-color: $subNavBgDefault;
     border-radius: 0.5rem;
     font-family: $subNavFontFamily;
-    font-weight: light;
+    font-weight: 300;
     font-size: $subNavFontDefault;
     .navbar-brand {
         color: $subNavColHighlight;
