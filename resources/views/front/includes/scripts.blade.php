@@ -4,6 +4,14 @@
 <script src="{{ asset('public/js/fontawesome-all.min.js') }}"></script>
 <script src="{{ asset('public/js/jquery.elevatezoom.js') }}"></script>
 <script src='https://www.google.com/recaptcha/api.js'></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117292723-4"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-117292723-4');
+</script>
 
 <script>
     $(document).ready(function () {
