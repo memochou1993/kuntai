@@ -150,11 +150,11 @@
                             </select>
 
                             @if ($request->dir == 'asc')
-                                <a href="{{ route('front.items.filter', ['q' => $request->q, 'nq' => $request->nq, 'year' => $request->year, 'order' => $request->order, 'dir' => 'desc']) }}"><i class="fas fa-long-arrow-alt-up"></i></a>
+                                <a href="{{ route('front.items.filter', ['q' => $request->q, 'nq' => $request->nq, 'year' => $request->year, 'limit' => $request->limit, 'order' => $request->order, 'dir' => 'desc']) }}"><i class="fas fa-long-arrow-alt-up"></i></a>
                             @elseif ($request->dir == 'desc')
-                                <a href="{{ route('front.items.filter', ['q' => $request->q, 'nq' => $request->nq, 'year' => $request->year, 'order' => $request->order, 'dir' => 'asc']) }}"><i class="fas fa-long-arrow-alt-down"></i></a>
+                                <a href="{{ route('front.items.filter', ['q' => $request->q, 'nq' => $request->nq, 'year' => $request->year, 'limit' => $request->limit, 'order' => $request->order, 'dir' => 'asc']) }}"><i class="fas fa-long-arrow-alt-down"></i></a>
                             @elseif (!isset($request->dir))
-                                <a href="{{ route('front.items.filter', ['q' => $request->q, 'nq' => $request->nq, 'year' => $request->year, 'order' => $request->order, 'dir' => 'desc']) }}"><i class="fas fa-long-arrow-alt-up"></i></a>
+                                <a href="{{ route('front.items.filter', ['q' => $request->q, 'nq' => $request->nq, 'year' => $request->year, 'limit' => $request->limit, 'order' => $request->order, 'dir' => 'desc']) }}"><i class="fas fa-long-arrow-alt-up"></i></a>
                             @endif
                             排序
                         </div>
