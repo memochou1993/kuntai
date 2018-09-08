@@ -24,17 +24,19 @@
             </div>
 
             <div class="card-body">
-                <dl class="row">
+                <div class="row mb-3">
                     <div class="mr-sm-auto px-3">
                         {{ $post->title }}
                     </div>
                     <div class="ml-sm-auto px-3">
                         {{ date('Y-m-d', strtotime($post->created_at)) }}
                     </div>
-                    <div class="p-3">
+                </div>
+                <div class="row">
+                    <div class="px-3">
                         {!! $post->content !!}
                     </div>
-                </dl>
+                </div>
             </div>
         </div>
     @endif

@@ -7,7 +7,6 @@
                 <tr>
                     <th>日期</th>
                     <th>標題</th>
-                    <th class="sm-display">內容</th>
                     <th class="sm-display"></th>
                 </tr>
             </thead>
@@ -20,7 +19,6 @@
                                 {{ $post->title }}
                             </a>
                         </td>
-                        <td class="sm-display">{{ $post->content }}</td>
                         <td class="sm-display">@if($post->pin) <i class="fas fa-thumbtack text-danger"></i> @endif</td>
                     </tr>
                 @endforeach
