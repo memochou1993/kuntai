@@ -32,7 +32,7 @@
                             <label class="custom-control-label" for="pin_true">是</label>
                         </div>
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="pin_false" name="pin" value="0" selected="selected" class="custom-control-input">
+                            <input type="radio" id="pin_false" name="pin" value="0" checked class="custom-control-input">
                             <label class="custom-control-label" for="pin_false">否</label>
                         </div>
                     </div>

@@ -24,10 +24,7 @@
             </div>
 
             <div class="card-body">
-                <div class="row mb-3">
-                    <div class="mr-sm-auto px-3">
-                        {{ $post->title }}
-                    </div>
+                <div class="row">
                     <div class="ml-sm-auto px-3">
                         {{ date('Y-m-d', strtotime($post->created_at)) }}
                     </div>
