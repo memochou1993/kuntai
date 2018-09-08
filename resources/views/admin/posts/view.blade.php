@@ -5,21 +5,21 @@
         <div class="card">
             <div class="card-header">
                 <div class="d-flex flex-wrap">
-                    <div>詳細資料</div>
+                    <div>詳細內容</div>
                     
                     <div class="ml-sm-auto">
-                        <a href="{{ Route('front.home.index') }}">查看</a>
+                        <a href="{{ Route('front.posts.view', $post->id) }}">查看</a>
                         |
                         @if ($previous_post_id)
-                            <a href="{{ Route('admin.posts.view', $previous_post_id) }}">上一筆</a>
+                            <a href="{{ Route('admin.posts.view', $previous_post_id) }}">上一則</a>
                         @else
-                            <a>上一筆</a>
+                            <a>上一則</a>
                         @endif
                         |
                         @if ($next_post_id)
-                            <a href="{{ Route('admin.posts.view', $next_post_id) }}">下一筆</a>
+                            <a href="{{ Route('admin.posts.view', $next_post_id) }}">下一則</a>
                         @else
-                            <a>下一筆</a>
+                            <a>下一則</a>
                         @endif
                     </div>
                 </div>
@@ -43,7 +43,7 @@
                         <div class="outdent-4">內容</div>
                     </dt>
                     <dl class="col-md-8">
-                        <div class="outdent-5">{{ $post->content }}</div>
+                        <div class="outdent-5">{!! $post->content !!}</div>
                     </dl>
                     <dt class="col-md-4 text-md-right">
                         <div class="outdent-4">置頂</div>

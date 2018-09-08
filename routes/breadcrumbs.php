@@ -7,6 +7,12 @@ Breadcrumbs::register('front.home.index', function ($breadcrumbs) {
     $breadcrumbs->push('首頁', url('/'));
 });
 
+// Home > Posts > View
+Breadcrumbs::register('front.posts.view', function ($breadcrumbs, $post) {
+    $breadcrumbs->parent('front.home.index');
+    $breadcrumbs->push($post->title, route('front.posts.view', $post));
+});
+
 // Home > Items
 Breadcrumbs::register('front.items.index', function ($breadcrumbs) {
     $breadcrumbs->parent('front.home.index');
@@ -41,6 +47,27 @@ Breadcrumbs::register('admin.home.index', function ($breadcrumbs) {
 Breadcrumbs::register('register', function ($breadcrumbs) {
     $breadcrumbs->push('首頁', route('admin.home.index'));
     $breadcrumbs->push('註冊', route('register'));
+});
+
+// Home > Posts
+Breadcrumbs::register('admin.posts.index', function ($breadcrumbs) {
+    $breadcrumbs->parent('admin.home.index');
+    $breadcrumbs->push('文章一覽', route('admin.posts.index'));
+});
+// Home > Posts > Add
+Breadcrumbs::register('admin.posts.showAddForm', function ($breadcrumbs) {
+    $breadcrumbs->parent('admin.posts.index');
+    $breadcrumbs->push('新增', route('admin.posts.showAddForm'));
+});
+// Home > Posts > View
+Breadcrumbs::register('admin.posts.view', function ($breadcrumbs, $post) {
+    $breadcrumbs->parent('admin.posts.index');
+    $breadcrumbs->push($post->title, route('admin.posts.view', $post));
+});
+// Home > Posts > View > Update
+Breadcrumbs::register('admin.posts.showUpdateForm', function ($breadcrumbs, $post) {
+    $breadcrumbs->parent('admin.posts.view', $post);
+    $breadcrumbs->push('修改', route('admin.posts.showUpdateForm', $post));
 });
 
 // Home > Items
@@ -84,25 +111,4 @@ Breadcrumbs::register('admin.itemElements.view', function ($breadcrumbs, $item_e
 Breadcrumbs::register('admin.itemElements.showUpdateForm', function ($breadcrumbs, $item_element) {
     $breadcrumbs->parent('admin.itemElements.view', $item_element);
     $breadcrumbs->push('修改', route('admin.itemElements.showUpdateForm', $item_element));
-});
-
-// Home > Posts
-Breadcrumbs::register('admin.posts.index', function ($breadcrumbs) {
-    $breadcrumbs->parent('admin.home.index');
-    $breadcrumbs->push('文章一覽', route('admin.posts.index'));
-});
-// Home > Posts > Add
-Breadcrumbs::register('admin.posts.showAddForm', function ($breadcrumbs) {
-    $breadcrumbs->parent('admin.posts.index');
-    $breadcrumbs->push('新增', route('admin.posts.showAddForm'));
-});
-// Home > Posts > View
-Breadcrumbs::register('admin.posts.view', function ($breadcrumbs, $post) {
-    $breadcrumbs->parent('admin.posts.index');
-    $breadcrumbs->push($post->title, route('admin.posts.view', $post));
-});
-// Home > Posts > View > Update
-Breadcrumbs::register('admin.posts.showUpdateForm', function ($breadcrumbs, $post) {
-    $breadcrumbs->parent('admin.posts.view', $post);
-    $breadcrumbs->push('修改', route('admin.posts.showUpdateForm', $post));
 });

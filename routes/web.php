@@ -4,6 +4,10 @@ Route::namespace('Front')->group(function () {
     Route::get('/', ['as' =>'front.home.index', 'uses' => 'HomeController@index']);
     Route::get('about', ['as' =>'front.home.about', 'uses' => 'HomeController@about']);
 
+    Route::prefix('posts')->group(function () {
+        Route::get('view/{post}', ['as' =>'front.posts.view', 'uses' => 'Post\PostController@view']);
+    });
+
     Route::prefix('items')->group(function () {
         Route::get('/', ['as' =>'front.items.index', 'uses' => 'Item\ItemController@index']);
         Route::get('view/{item}', ['as' =>'front.items.view', 'uses' => 'Item\ItemController@view']);
@@ -27,16 +31,6 @@ Route::namespace('Admin')->prefix('admin')->group(function () {
     Route::get('register', ['as' => 'register', 'uses' => 'Auth\RegisterController@showRegistrationForm']);
     Route::post('register', ['as' => '', 'uses' => 'Auth\RegisterController@register']);
 
-    Route::prefix('items')->group(function () {
-        Route::get('/', ['as' =>'admin.items.index', 'uses' => 'Item\ItemController@index']);
-        Route::get('add', ['as' =>'admin.items.showAddForm', 'uses' => 'Item\ItemController@showAddForm']);
-        Route::post('add', ['as' =>'admin.items.add', 'uses' => 'Item\ItemController@add']);
-        Route::get('view/{item}', ['as' =>'admin.items.view', 'uses' => 'Item\ItemController@view']);
-        Route::get('update/{item}', ['as' =>'admin.items.showUpdateForm', 'uses' => 'Item\ItemController@showUpdateForm']);
-        Route::post('update/{item}', ['as' =>'admin.items.update', 'uses' => 'Item\ItemController@update']);
-        Route::delete('destroy/{item}', ['as' =>'admin.items.destroy', 'uses' =>'Item\ItemController@destroy']);
-    });
-
     Route::prefix('posts')->group(function () {
         Route::get('/', ['as' =>'admin.posts.index', 'uses' => 'Post\PostController@index']);
         Route::get('add', ['as' =>'admin.posts.showAddForm', 'uses' => 'Post\PostController@showAddForm']);
@@ -45,6 +39,16 @@ Route::namespace('Admin')->prefix('admin')->group(function () {
         Route::get('update/{post}', ['as' =>'admin.posts.showUpdateForm', 'uses' => 'Post\PostController@showUpdateForm']);
         Route::post('update/{post}', ['as' =>'admin.posts.update', 'uses' => 'Post\PostController@update']);
         Route::delete('destroy/{post}', ['as' =>'admin.posts.destroy', 'uses' =>'Post\PostController@destroy']);
+    });
+
+    Route::prefix('items')->group(function () {
+        Route::get('/', ['as' =>'admin.items.index', 'uses' => 'Item\ItemController@index']);
+        Route::get('add', ['as' =>'admin.items.showAddForm', 'uses' => 'Item\ItemController@showAddForm']);
+        Route::post('add', ['as' =>'admin.items.add', 'uses' => 'Item\ItemController@add']);
+        Route::get('view/{item}', ['as' =>'admin.items.view', 'uses' => 'Item\ItemController@view']);
+        Route::get('update/{item}', ['as' =>'admin.items.showUpdateForm', 'uses' => 'Item\ItemController@showUpdateForm']);
+        Route::post('update/{item}', ['as' =>'admin.items.update', 'uses' => 'Item\ItemController@update']);
+        Route::delete('destroy/{item}', ['as' =>'admin.items.destroy', 'uses' =>'Item\ItemController@destroy']);
     });
 
     Route::prefix('itemElements')->group(function () {

@@ -182,5 +182,6 @@
     });
 
     /* 文字編輯器 */
+    $('#content').ckeditor();
     $('#description').ckeditor();
 </script>

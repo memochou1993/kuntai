@@ -21,7 +21,7 @@
                     <div class="form-group row">
                         <label for="content" class="col-md-4 control-label text-md-right">內容</label>
                         <div class="col-md-6">
-                            <input type="text" name="content" value="{{ $post->content }}" id="content" class="form-control">
+                            <textarea name="content" id="content" class="form-control">{{ $post->content }}</textarea>
                         </div>
                     </div>
 

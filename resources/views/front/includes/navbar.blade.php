@@ -15,14 +15,14 @@
                         首頁
                     </a>
                 </li>
-                <li class="nav-item @if (Request::is('items') or Request::is('items*')) {{ 'active' }} @endif">
+                {{-- <li class="nav-item @if (Request::is('items') or Request::is('items*')) {{ 'active' }} @endif">
                     <a href="{{ route('front.items.index') }}" class="nav-link">
                         酒款一覽
                     </a>
-                </li>
+                </li> --}}
                 <li class="nav-item @if (Request::is('about')) {{ 'active' }} @endif">
                     <a href="{{ route('front.home.about') }}" class="nav-link">
-                        關於廣太
+                        門市資訊
                     </a>
                 </li>
                 <li class="nav-item @if (Request::is('contact')) {{ 'active' }} @endif">

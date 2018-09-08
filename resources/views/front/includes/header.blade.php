@@ -6,7 +6,7 @@
             </div>
         </div>
         
-        <div class="col-lg-6 col-md-12 ml-auto box-search">
+        {{-- <div class="col-lg-6 col-md-12 ml-auto box-search">
             <form action="{{ route('front.items.index') }}" method="GET" class="form-horizontal">
                 <div class="input-group">
                     <input type="text" name="q" value="@if (!empty($request->q)){{ $request->q }}@endif" class="form-control" placeholder="請輸入關鍵詞">
@@ -24,7 +24,7 @@
                     @endforeach
                 @endif
             </div>
-        </div>
+        </div> --}}
     </div>
 
     <hr>

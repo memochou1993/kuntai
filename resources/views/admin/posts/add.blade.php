@@ -20,7 +20,7 @@
                 <div class="form-group row">
                     <label for="content" class="col-md-4 col-form-label text-md-right">內容</label>
                     <div class="col-md-6">
-                        <textarea name="content" class="form-control" id="content" cols="30" rows="10">{{ old('content') }}</textarea>
+                        <textarea name="content" id="content" class="form-control">{{ old('content') }}</textarea>
                     </div>
                 </div>
 
@@ -32,7 +32,7 @@
                             <label class="custom-control-label" for="pin_true">是</label>
                         </div>
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="pin_false" name="pin" value="0"  class="custom-control-input">
+                            <input type="radio" id="pin_false" name="pin" value="0" selected="selected" class="custom-control-input">
                             <label class="custom-control-label" for="pin_false">否</label>
                         </div>
                     </div>
