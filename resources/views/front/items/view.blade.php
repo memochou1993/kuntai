@@ -40,7 +40,7 @@
                             </div>
                         @else
                             <div class="text-center">
-                                <img src="{{ asset('public/images/item/no_image.png') }}" alt="{{ $item->first_name }}"/>
+                                <img src="{{ asset('images/item/no_image.png') }}" alt="{{ $item->first_name }}"/>
                             </div>
                         @endif
                     </div>
@@ -173,7 +173,7 @@
                                     </a>
                                 @else
                                     <a href="{{ route('front.items.view', $item_speciality_item->id) }}">
-                                        <img src="{{ asset('public/images/item/no_image.png')}}" alt="{{ $item_speciality_item->first_name }}" class="box-item-image-size"/>
+                                        <img src="{{ asset('images/item/no_image.png')}}" alt="{{ $item_speciality_item->first_name }}" class="box-item-image-size"/>
                                     </a>
                                 @endif
                             </div>
@@ -213,7 +213,7 @@
                                     </a>
                                 @else
                                     <a href="{{ route('front.items.view', $item_association_item->id) }}">
-                                        <img src="{{ asset('public/images/item/no_image.png')}}" alt="{{ $item_association_item->first_name }}" class="box-item-image-size"/>
+                                        <img src="{{ asset('images/item/no_image.png')}}" alt="{{ $item_association_item->first_name }}" class="box-item-image-size"/>
                                     </a>
                                 @endif
                             </div>

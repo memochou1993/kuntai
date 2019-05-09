@@ -241,11 +241,11 @@
                 <div class="text-center">
                     @if (File::exists('storage/app/public/images/item/front/'.$item_bestseller_item->id.'_m.jpg'))
                         <a href="{{ route("front.items.view", $item_bestseller_item->id) }}">
-                            <img src="{{ asset('public/storage/images/item/middle/'.$item->id.'_m.jpg')}}" alt="{{ $item_bestseller_item->first_name }}" class="box-item-image-size"/>
+                            <img src="{{ asset('storage/images/item/middle/'.$item->id.'_m.jpg')}}" alt="{{ $item_bestseller_item->first_name }}" class="box-item-image-size"/>
                         </a>
                     @else
                         <a href="{{ route("front.items.view", $item_bestseller_item->id) }}">
-                            <img src="{{ asset('public/images/item/no_image.png')}}" alt="{{ $item_bestseller_item->first_name }}" class="box-item-image-size"/>
+                            <img src="{{ asset('images/item/no_image.png')}}" alt="{{ $item_bestseller_item->first_name }}" class="box-item-image-size"/>
                         </a>
                     @endif
                 </div>

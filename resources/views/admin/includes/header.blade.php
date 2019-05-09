@@ -3,7 +3,7 @@
         <div class="d-flex flex-wrap box" id="header">
             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-8">
                 <div>
-                    <a href="{{ route('admin.home.index') }}"><img src="{{ asset('public/images/logo.png')}}" alt="KUNTAI" class="box-logo"/></a>
+                    <a href="{{ route('admin.home.index') }}"><img src="{{ asset('images/logo.png')}}" alt="KUNTAI" class="box-logo"/></a>
                 </div>
             </div>
             

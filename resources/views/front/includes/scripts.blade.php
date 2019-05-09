@@ -1,8 +1,8 @@
-<script src="{{ asset('public/js/manifest.js') }}"></script>
-<script src="{{ asset('public/js/vendor.js') }}"></script>
-<script src="{{ asset('public/js/app.js') }}"></script>
-<script src="{{ asset('public/js/fontawesome-all.min.js') }}"></script>
-<script src="{{ asset('public/js/jquery.elevatezoom.js') }}"></script>
+<script src="{{ asset('js/manifest.js') }}"></script>
+<script src="{{ asset('js/vendor.js') }}"></script>
+<script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ asset('js/fontawesome-all.min.js') }}"></script>
+<script src="{{ asset('js/jquery.elevatezoom.js') }}"></script>
 <script src='https://www.google.com/recaptcha/api.js'></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117292723-4"></script>
 <script>

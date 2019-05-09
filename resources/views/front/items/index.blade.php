@@ -19,7 +19,7 @@
                                         @if (File::exists('storage/app/public/images/item/front/'.$item->id.'_m.jpg'))
                                             <img src="{{ asset('storage/app/public/images/item/front/'.$item->id.'_m.jpg') }}" alt="{{ $item->first_name }}" class="box-item-image-size"/>
                                         @else
-                                            <img src="{{ asset('public/images/item/no_image.png') }}" alt="No Image" class="box-item-image-size"/>
+                                            <img src="{{ asset('images/item/no_image.png') }}" alt="No Image" class="box-item-image-size"/>
                                         @endif
                                     </a>
                                 </div>

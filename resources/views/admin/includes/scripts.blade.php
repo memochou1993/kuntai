@@ -1,12 +1,12 @@
-<script src="{{ asset('public/js/manifest.js') }}"></script>
-<script src="{{ asset('public/js/vendor.js') }}"></script>
-<script src="{{ asset('public/js/app.js') }}"></script>
-<script src="{{ asset('public/js/fontawesome-all.min.js') }}"></script>
-<script src="{{ asset('public/js/bootbox.min.js') }}"></script>
-<script src="{{ asset('public/js/jquery-ui.min.js') }}"></script>
-<script src="{{ asset('public/js/jquery.elevatezoom.js') }}"></script>
-<script src="{{ asset('public/vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
-<script src="{{ asset('public/vendor/unisharp/laravel-ckeditor/adapters/jquery.js') }}"></script>
+<script src="{{ asset('js/manifest.js') }}"></script>
+<script src="{{ asset('js/vendor.js') }}"></script>
+<script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ asset('js/fontawesome-all.min.js') }}"></script>
+<script src="{{ asset('js/bootbox.min.js') }}"></script>
+<script src="{{ asset('js/jquery-ui.min.js') }}"></script>
+<script src="{{ asset('js/jquery.elevatezoom.js') }}"></script>
+<script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
+<script src="{{ asset('vendor/unisharp/laravel-ckeditor/adapters/jquery.js') }}"></script>
 
 <script>
     function split(value) {

@@ -5,8 +5,8 @@
 
 <title>廣太洋酒</title>
 
-<link href="{{ asset('public/images/favicon.png') }}" rel="shortcut icon">
-<link href="{{ asset('public/css/loading.css') }}" rel="stylesheet">
-<link href="{{ asset('public/css/app.css') }}" rel="stylesheet">
-<link href="{{ asset('public/css/all.css') }}" rel="stylesheet">
-<link href="{{ asset('public/css/jquery-ui.min.css') }}" rel="stylesheet">
+<link href="{{ asset('images/favicon.png') }}" rel="shortcut icon">
+<link href="{{ asset('css/loading.css') }}" rel="stylesheet">
+<link href="{{ asset('css/app.css') }}" rel="stylesheet">
+<link href="{{ asset('css/all.css') }}" rel="stylesheet">
+<link href="{{ asset('css/jquery-ui.min.css') }}" rel="stylesheet">

@@ -47,7 +47,7 @@
                                         </div>
                                     @else
                                         <div class="mb-3">
-                                            <img src="{{ asset('public/images/item/no_image.png') }}" alt="No Image"/>
+                                            <img src="{{ asset('images/item/no_image.png') }}" alt="No Image"/>
                                         </div>
                                     @endif
                                 </div>
