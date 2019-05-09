@@ -11,26 +11,26 @@
         </div>
     </div>
     
-    <div class="jumbotron py-3" id="intro">
-        <h1 class="h3">最新消息</h1>
-        <hr class="my-4">
-        <div class="d-flex flex-wrap">
-            @if (!empty($posts))
+    @if (!empty($posts))
+        <div class="jumbotron py-3" id="intro">
+            <h1 class="h3">最新消息</h1>
+            <hr class="my-4">
+            <div class="d-flex flex-wrap">
                 @foreach ($posts as $post)
                     <div class="col-xl-2 text-xl-right my-2">@if ($post->pin) <i class="fas fa-thumbtack text-danger mr-1"></i> @endif {{ date('Y-m-d', strtotime($post->created_at)) }}</div>
                     <div class="col-xl-10 my-2"><a href="{{ route('front.posts.view', $post->id) }}">{{ $post->title }}</a></div>
                 @endforeach
-            @endif
+            </div>
+            <hr class="my-4">
+            <div class="d-flex justify-content-center box-post-pagination">
+                @if ($agent->isMobile())
+                    {{ $posts->links('vendor.pagination.simple-bootstrap-4') }}
+                @else
+                    {{ $posts->links('vendor.pagination.bootstrap-4') }}
+                @endif
+            </div>
         </div>
-        <hr class="my-4">
-        <div class="d-flex justify-content-center box-post-pagination">
-            @if ($agent->isMobile())
-                {{ $posts->links('vendor.pagination.simple-bootstrap-4') }}
-            @else
-                {{ $posts->links('vendor.pagination.bootstrap-4') }}
-            @endif
-        </div>
-    </div>
+    @endif
 
     <div class="jumbotron py-3" id="intro">
         <h1 class="h3">公司沿革</h1>
