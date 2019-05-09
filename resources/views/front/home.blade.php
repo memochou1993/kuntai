@@ -11,7 +11,7 @@
         </div>
     </div>
     
-    @if (!empty($posts))
+    @if (count($posts) > 0)
         <div class="jumbotron py-3" id="intro">
             <h1 class="h3">最新消息</h1>
             <hr class="my-4">
