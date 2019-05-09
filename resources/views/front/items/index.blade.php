@@ -16,8 +16,8 @@
                             <div class="w-100">
                                 <div class="text-center box-item-image">
                                     <a href="{{ route('front.items.view', $item->id) }}">
-                                        @if (File::exists('storage/app/public/images/item/front/'.$item->id.'_m.jpg'))
-                                            <img src="{{ asset('storage/app/public/images/item/front/'.$item->id.'_m.jpg') }}" alt="{{ $item->first_name }}" class="box-item-image-size"/>
+                                        @if (File::exists('storage/images/item/front/'.$item->id.'_m.jpg'))
+                                            <img src="{{ asset('storage/images/item/front/'.$item->id.'_m.jpg') }}" alt="{{ $item->first_name }}" class="box-item-image-size"/>
                                         @else
                                             <img src="{{ asset('images/item/no_image.png') }}" alt="No Image" class="box-item-image-size"/>
                                         @endif

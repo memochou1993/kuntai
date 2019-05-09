@@ -147,21 +147,21 @@ class ItemController extends Controller
         if ($request->hasFile('image_front')) {
             $image = Storage::putFileAs('public/images/item/front', $request->file('image_front'), $items->id.'.jpg');
 
-            $image = Image::make('storage/app/public/images/item/front/'.$items->id.'.jpg')->resize(320, 800)->save('storage/app/public/images/item/front/'.$items->id.'_l.jpg');
+            $image = Image::make('storage/images/item/front/'.$items->id.'.jpg')->resize(320, 800)->save('storage/images/item/front/'.$items->id.'_l.jpg');
 
-            $image = Image::make('storage/app/public/images/item/front/'.$items->id.'.jpg')->resize(160, 400)->save('storage/app/public/images/item/front/'.$items->id.'_m.jpg');
+            $image = Image::make('storage/images/item/front/'.$items->id.'.jpg')->resize(160, 400)->save('storage/images/item/front/'.$items->id.'_m.jpg');
 
-            $image = Image::make('storage/app/public/images/item/front/'.$items->id.'.jpg')->resize(48, 120)->save('storage/app/public/images/item/front/'.$items->id.'_s.jpg');
+            $image = Image::make('storage/images/item/front/'.$items->id.'.jpg')->resize(48, 120)->save('storage/images/item/front/'.$items->id.'_s.jpg');
         }
         
         if ($request->hasFile('image_back')) {
             $image = Storage::putFileAs('public/images/item/back', $request->file('image_back'), $items->id.'.jpg');
 
-            $image = Image::make('storage/app/public/images/item/back/'.$items->id.'.jpg')->resize(320, 800)->save('storage/app/public/images/item/back/'.$items->id.'_l.jpg');
+            $image = Image::make('storage/images/item/back/'.$items->id.'.jpg')->resize(320, 800)->save('storage/images/item/back/'.$items->id.'_l.jpg');
 
-            $image = Image::make('storage/app/public/images/item/back/'.$items->id.'.jpg')->resize(160, 400)->save('storage/app/public/images/item/back/'.$items->id.'_m.jpg');
+            $image = Image::make('storage/images/item/back/'.$items->id.'.jpg')->resize(160, 400)->save('storage/images/item/back/'.$items->id.'_m.jpg');
 
-            $image = Image::make('storage/app/public/images/item/back/'.$items->id.'.jpg')->resize(48, 120)->save('storage/app/public/images/item/back/'.$items->id.'_s.jpg');
+            $image = Image::make('storage/images/item/back/'.$items->id.'.jpg')->resize(48, 120)->save('storage/images/item/back/'.$items->id.'_s.jpg');
         }
 
         return redirect()->route('admin.items.view', $items->id);
@@ -301,9 +301,9 @@ class ItemController extends Controller
         
         if ($request->hasFile('image_front')) {
             $image = Storage::putFileAs('public/images/item/front', $request->file('image_front'), $item->id.'.jpg');
-            $image = Image::make('storage/app/public/images/item/front/'.$item->id.'.jpg')->resize(320, 800)->save('storage/app/public/images/item/front/'.$item->id.'_l.jpg');
-            $image = Image::make('storage/app/public/images/item/front/'.$item->id.'.jpg')->resize(160, 400)->save('storage/app/public/images/item/front/'.$item->id.'_m.jpg');
-            $image = Image::make('storage/app/public/images/item/front/'.$item->id.'.jpg')->resize(48, 120)->save('storage/app/public/images/item/front/'.$item->id.'_s.jpg');
+            $image = Image::make('storage/images/item/front/'.$item->id.'.jpg')->resize(320, 800)->save('storage/images/item/front/'.$item->id.'_l.jpg');
+            $image = Image::make('storage/images/item/front/'.$item->id.'.jpg')->resize(160, 400)->save('storage/images/item/front/'.$item->id.'_m.jpg');
+            $image = Image::make('storage/images/item/front/'.$item->id.'.jpg')->resize(48, 120)->save('storage/images/item/front/'.$item->id.'_s.jpg');
         } elseif ($request->input('abandoned_image_front')) {
             Storage::delete('public/images/item/front/'.$item->id.'.jpg');
             Storage::delete('public/images/item/front/'.$item->id.'_s.jpg');
@@ -313,9 +313,9 @@ class ItemController extends Controller
         
         if ($request->hasFile('image_back')) {
             $image = Storage::putFileAs('public/images/item/back', $request->file('image_back'), $item->id.'.jpg');
-            $image = Image::make('storage/app/public/images/item/back/'.$item->id.'.jpg')->resize(320, 800)->save('storage/app/public/images/item/back/'.$item->id.'_l.jpg');
-            $image = Image::make('storage/app/public/images/item/back/'.$item->id.'.jpg')->resize(160, 400)->save('storage/app/public/images/item/back/'.$item->id.'_m.jpg');
-            $image = Image::make('storage/app/public/images/item/back/'.$item->id.'.jpg')->resize(48, 120)->save('storage/app/public/images/item/back/'.$item->id.'_s.jpg');
+            $image = Image::make('storage/images/item/back/'.$item->id.'.jpg')->resize(320, 800)->save('storage/images/item/back/'.$item->id.'_l.jpg');
+            $image = Image::make('storage/images/item/back/'.$item->id.'.jpg')->resize(160, 400)->save('storage/images/item/back/'.$item->id.'_m.jpg');
+            $image = Image::make('storage/images/item/back/'.$item->id.'.jpg')->resize(48, 120)->save('storage/images/item/back/'.$item->id.'_s.jpg');
         } elseif ($request->input('abandoned_image_back')) {
             Storage::delete('public/images/item/back/'.$item->id.'.jpg');
             Storage::delete('public/images/item/back/'.$item->id.'_s.jpg');

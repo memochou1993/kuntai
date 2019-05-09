@@ -31,18 +31,18 @@
                         <div class="d-flex flex-column">
                             <div class="d-flex justify-content-md-end mb-3">
                                 <div class="card-image">
-                                    @if (File::exists('storage/app/public/images/item/front/'.$item->id.'_m.jpg'))
+                                    @if (File::exists('storage/images/item/front/'.$item->id.'_m.jpg'))
                                         <div class="mb-3">
-                                            <img id="item-zoom" src="{{ asset('storage/app/public/images/item/front/'.$item->id.'_m.jpg') }}" data-zoom-image="{{ asset('storage/app/public/images/item/front/'.$item->id.'_l.jpg') }}" alt="{{ $item->first_name }}"/>
+                                            <img id="item-zoom" src="{{ asset('storage/images/item/front/'.$item->id.'_m.jpg') }}" data-zoom-image="{{ asset('storage/images/item/front/'.$item->id.'_l.jpg') }}" alt="{{ $item->first_name }}"/>
                                         </div>
                                         
                                         <div class="text-center" id="item-gallery">
-                                            <a href="#" data-image="{{ asset('storage/app/public/images/item/front/'.$item->id.'_m.jpg') }}" data-zoom-image="{{ asset('storage/app/public/images/item/front/'.$item->id.'_l.jpg') }}">
-                                                <img id="zoom" src="{{ asset('storage/app/public/images/item/front/'.$item->id.'_s.jpg') }}"/>
+                                            <a href="#" data-image="{{ asset('storage/images/item/front/'.$item->id.'_m.jpg') }}" data-zoom-image="{{ asset('storage/images/item/front/'.$item->id.'_l.jpg') }}">
+                                                <img id="zoom" src="{{ asset('storage/images/item/front/'.$item->id.'_s.jpg') }}"/>
                                             </a>
                                             
-                                            <a href="#" data-image="{{ asset('storage/app/public/images/item/back/'.$item->id.'_m.jpg') }}" data-zoom-image="{{ asset('storage/app/public/images/item/back/'.$item->id.'_l.jpg') }}">
-                                                <img id="zoom" src="{{ asset('storage/app/public/images/item/back/'.$item->id.'_s.jpg') }}"/>
+                                            <a href="#" data-image="{{ asset('storage/images/item/back/'.$item->id.'_m.jpg') }}" data-zoom-image="{{ asset('storage/images/item/back/'.$item->id.'_l.jpg') }}">
+                                                <img id="zoom" src="{{ asset('storage/images/item/back/'.$item->id.'_s.jpg') }}"/>
                                             </a>
                                         </div>
                                     @else

@@ -20,20 +20,20 @@
             
                 <div class="d-flex flex-wrap box-item-content">
                     <div class="col-xl-4 mb-3">
-                        @if (File::exists('storage/app/public/images/item/front/'.$item->id.'_m.jpg'))
+                        @if (File::exists('storage/images/item/front/'.$item->id.'_m.jpg'))
                             <div class="d-flex flex-wrap">
                                 <div class="col-xl-6 mb-3">
-                                    <img id="item-zoom" src="{{ asset('storage/app/public/images/item/front/'.$item->id.'_m.jpg') }}" data-zoom-image="{{ asset('storage/app/public/images/item/front/'.$item->id.'_l.jpg') }}" alt="{{ $item->first_name }}"/>
+                                    <img id="item-zoom" src="{{ asset('storage/images/item/front/'.$item->id.'_m.jpg') }}" data-zoom-image="{{ asset('storage/images/item/front/'.$item->id.'_l.jpg') }}" alt="{{ $item->first_name }}"/>
                                 </div>
                                 
                                 <div class="col-xl-6 text-xl-right">
                                     <div id="item-gallery">
-                                        <a href="#" data-image="{{ asset('storage/app/public/images/item/front/'.$item->id.'_m.jpg') }}" data-zoom-image="{{ asset('storage/app/public/images/item/front/'.$item->id.'_l.jpg') }}">
-                                            <img id="zoom" src="{{ asset('storage/app/public/images/item/front/'.$item->id.'_s.jpg') }}"/>
+                                        <a href="#" data-image="{{ asset('storage/images/item/front/'.$item->id.'_m.jpg') }}" data-zoom-image="{{ asset('storage/images/item/front/'.$item->id.'_l.jpg') }}">
+                                            <img id="zoom" src="{{ asset('storage/images/item/front/'.$item->id.'_s.jpg') }}"/>
                                         </a>
                                         
-                                        <a href="#" data-image="{{ asset('storage/app/public/images/item/back/'.$item->id.'_m.jpg') }}" data-zoom-image="{{ asset('storage/app/public/images/item/back/'.$item->id.'_l.jpg') }}">
-                                            <img id="zoom" src="{{ asset('storage/app/public/images/item/back/'.$item->id.'_s.jpg') }}"/>
+                                        <a href="#" data-image="{{ asset('storage/images/item/back/'.$item->id.'_m.jpg') }}" data-zoom-image="{{ asset('storage/images/item/back/'.$item->id.'_l.jpg') }}">
+                                            <img id="zoom" src="{{ asset('storage/images/item/back/'.$item->id.'_s.jpg') }}"/>
                                         </a>
                                     </div>
                                 </div>
@@ -167,9 +167,9 @@
                     @foreach ($item_speciality_items as $item_speciality_item)
                         <div class="box-item-content">
                             <div class="text-center">
-                                @if (File::exists('storage/app/public/images/item/front/'.$item_speciality_item->id.'_m.jpg'))
+                                @if (File::exists('storage/images/item/front/'.$item_speciality_item->id.'_m.jpg'))
                                     <a href="{{ route('front.items.view', $item_speciality_item->id) }}">
-                                        <img src="{{ asset('storage/app/public/images/item/middle/'.$item_speciality_item->id.'.jpg')}}" alt="{{ $item_speciality_item->first_name }}" class="box-item-image-size"/>
+                                        <img src="{{ asset('storage/images/item/middle/'.$item_speciality_item->id.'.jpg')}}" alt="{{ $item_speciality_item->first_name }}" class="box-item-image-size"/>
                                     </a>
                                 @else
                                     <a href="{{ route('front.items.view', $item_speciality_item->id) }}">
@@ -207,9 +207,9 @@
                     @foreach ($item_association_items as $item_association_item)
                         <div class="box-item-content">
                             <div class="text-center">
-                                @if (File::exists('storage/app/public/images/item/front/'.$item_association_item->id.'_m.jpg'))
+                                @if (File::exists('storage/images/item/front/'.$item_association_item->id.'_m.jpg'))
                                     <a href="{{ route('front.items.view', $item_association_item->id) }}">
-                                        <img src="{{ asset('storage/app/public/images/item/front/'.$item_association_item->id.'_m.jpg')}}" alt="{{ $item_association_item->first_name }}" class="box-item-image-size"/>
+                                        <img src="{{ asset('storage/images/item/front/'.$item_association_item->id.'_m.jpg')}}" alt="{{ $item_association_item->first_name }}" class="box-item-image-size"/>
                                     </a>
                                 @else
                                     <a href="{{ route('front.items.view', $item_association_item->id) }}">

@@ -239,7 +239,7 @@
         @foreach ($item_bestseller_items as $item_bestseller_item)
             <div class="box-item-content">
                 <div class="text-center">
-                    @if (File::exists('storage/app/public/images/item/front/'.$item_bestseller_item->id.'_m.jpg'))
+                    @if (File::exists('storage/images/item/front/'.$item_bestseller_item->id.'_m.jpg'))
                         <a href="{{ route("front.items.view", $item_bestseller_item->id) }}">
                             <img src="{{ asset('storage/images/item/middle/'.$item->id.'_m.jpg')}}" alt="{{ $item_bestseller_item->first_name }}" class="box-item-image-size"/>
                         </a>
