@@ -6,25 +6,27 @@
             </div>
         </div>
         
-        <div class="col-lg-6 col-md-12 ml-auto box-search">
-            <form action="{{ route('front.items.index') }}" method="GET" class="form-horizontal">
-                <div class="input-group">
-                    <input type="text" name="q" value="@if (!empty($request->q)){{ $request->q }}@endif" class="form-control" placeholder="請輸入關鍵詞">
-                    <div class="input-group-append">
-                        <button class="btn btn-info" type="submit">
-                            <i class="fas fa-search box-search-icon"></i>
-                        </button>
+        @if (Request::is('items*'))
+            <div class="col-lg-6 col-md-12 ml-auto box-search">
+                <form action="{{ route('front.items.index') }}" method="GET" class="form-horizontal">
+                    <div class="input-group">
+                        <input type="text" name="q" value="@if (!empty($request->q)){{ $request->q }}@endif" class="form-control" placeholder="請輸入關鍵詞">
+                        <div class="input-group-append">
+                            <button class="btn btn-info" type="submit">
+                                <i class="fas fa-search box-search-icon"></i>
+                            </button>
+                        </div>
                     </div>
+                </form>
+                <div class="box-search-keyword">
+                    @if (!empty($item_element_keywords))
+                        @foreach ($item_element_keywords as $item_element_keyword)
+                            <a href="{{ route('front.items.index', ['q' => $item_element_keyword]) }}">{{ $item_element_keyword }}</a>
+                        @endforeach
+                    @endif
                 </div>
-            </form>
-            <div class="box-search-keyword">
-                @if (!empty($item_element_keywords))
-                    @foreach ($item_element_keywords as $item_element_keyword)
-                        <a href="{{ route('front.items.index', ['q' => $item_element_keyword]) }}">{{ $item_element_keyword }}</a>
-                    @endforeach
-                @endif
             </div>
-        </div>
+        @endif
     </div>
 
     <hr>
