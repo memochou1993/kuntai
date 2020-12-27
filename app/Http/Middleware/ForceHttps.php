@@ -18,7 +18,7 @@ class ForceHttps
     public function handle($request, Closure $next)
     {
         if (App::environment('production')) {
-            URL::forceSchema('https');
+            URL::forceScheme('https');
         }
 
         return $next($request);
