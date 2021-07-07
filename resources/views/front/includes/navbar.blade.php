@@ -22,11 +22,11 @@
                     </a>
                 </li>
                 --}}
-                <li class="nav-item @if (Request::is('about')) {{ 'active' }} @endif">
+                {{-- <li class="nav-item @if (Request::is('about')) {{ 'active' }} @endif">
                     <a href="{{ route('front.home.about') }}" class="nav-link">
                         門市資訊
                     </a>
-                </li>
+                </li> --}}
                 {{--
                 <li class="nav-item @if (Request::is('contact')) {{ 'active' }} @endif">
                     <a href="{{ route('front.home.contact') }}" class="nav-link">
