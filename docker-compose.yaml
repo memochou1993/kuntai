@@ -2,7 +2,7 @@ version: "3"
 
 services:
   app:
-    container_name: kuntai-server
+    container_name: kuntai
     build:
       context: .
       dockerfile: Dockerfile
