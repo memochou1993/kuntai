@@ -7,7 +7,7 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="廣太洋酒">
 <meta property="og:description" content="全新竹最專業的葡萄酒專賣店">
-<title>廣太洋酒 | 全新竹最專業的葡萄酒專賣店</title>
+<title>廣太洋酒｜全新竹最專業的葡萄酒專賣店</title>
 <link href="{{ asset('images/favicon.png') }}" rel="shortcut icon">
 <link href="{{ asset('css/loading.css') }}" rel="stylesheet">
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
