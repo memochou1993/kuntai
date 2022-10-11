@@ -4,13 +4,13 @@
 <script src="{{ asset('js/fontawesome-all.min.js') }}"></script>
 <script src="{{ asset('js/jquery.elevatezoom.js') }}"></script>
 <script src='https://www.google.com/recaptcha/api.js'></script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117292723-4"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4GEPFKJ9DT"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'UA-117292723-4');
+    gtag('config', 'G-4GEPFKJ9DT');
 </script>
 
 <script>
